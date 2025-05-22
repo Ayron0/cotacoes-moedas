@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1b1b1b;
+}
+
+header h1 {
+    margin: 0;
+    color: #98c379;
+}
+
+header nav a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    color: #98c379;
+}
+
+.cta {
+    margin: 30px auto;
+    padding: 15px 20px;
+    background-color: #98c379;
+    color: #121212;
+    text-align: center;
+    max-width: 400px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.cta p {
+    margin: 0;
+}
+
+.live-rates {
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #98c379;
+    color: #121212;
+}
+
+tr:nth-child(even) {
+    background-color: #1b1b1b;
+}
+
+.changer {
+    font-weight: 900;
+}
