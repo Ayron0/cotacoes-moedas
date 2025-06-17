@@ -75,4 +75,5 @@ tr:nth-child(even) {
 
 .changer {
     font-weight: 900;
+    color: green;
 }
