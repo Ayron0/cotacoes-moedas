@@ -77,3 +77,8 @@ tr:nth-child(even) {
     font-weight: 900;
     color: green;
 }
+
+.converter {
+    margin: 30px auto;
+    max-width: 300px;
+}

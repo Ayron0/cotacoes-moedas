@@ -42,6 +42,39 @@ async function getvalues() {
     } catch (error) {
                 
     }
+
+    
 }
+
+const moeda1Select = document.getElementById('moeda1');
+const moeda2Select = document.getElementById('moeda2');
+const comparacaoTexto = document.getElementById('comparacao');
+
+async function compararMoedas() {
+    const moeda1 = moeda1Select.value;
+    const moeda2 = moeda2Select.value;
+
+    if (moeda1 === moeda2) {
+        comparacaoTexto.textContent = 'Selecione moedas diferentes para comparar.';
+        return;
+    }
+
+    try {
+        const url = `https://economia.awesomeapi.com.br/json/last/${moeda1}-${moeda2}`;
+        const response = await fetch(url);
+        const data = await response.json();
+
+        const key = moeda1 + moeda2;
+        const valor = parseFloat(data[key].bid).toFixed(4);
+
+        comparacaoTexto.textContent = `1 ${moeda1} = ${valor} ${moeda2}`;
+    } catch (error) {
+        comparacaoTexto.textContent = 'Erro ao buscar cotação.';
+    }
+}
+
+moeda1Select.addEventListener('change', compararMoedas);
+moeda2Select.addEventListener('change', compararMoedas);
+
 
 getvalues()
